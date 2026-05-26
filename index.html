@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SweetMelt Bakery</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+:root{
+--cream:#FFF8F0;
+--brown:#6B4226;
+--orange:#F4A261;
+--pink:#FFD6E0;
+--white:#fff;
+}
+
+body{
+background:var(--cream);
+color:#444;
+}
+
+/* HERO FULLSCREEN */
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
+url('https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=1600&q=80');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero-content h1{
+font-family:'Pacifico',cursive;
+font-size:5rem;
+margin-bottom:20px;
+}
+
+.hero-content p{
+font-size:1.2rem;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:var(--orange);
+color:white;
+text-decoration:none;
+border-radius:50px;
+}
+
+/* NAV FLOATING */
+
+.navbar{
+width:90%;
+max-width:1200px;
+background:white;
+margin:-40px auto 0;
+padding:18px 40px;
+border-radius:70px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+position:relative;
+z-index:100;
+}
+
+.logo{
+font-family:'Pacifico';
+font-size:30px;
+color:var(--brown);
+}
+
+.navbar ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+.navbar a{
+text-decoration:none;
+color:#444;
+}
+
+/* FEATURE MENU */
+
+.menu-strip{
+padding:80px 8%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.menu-box{
+background:white;
+padding:30px;
+text-align:center;
+border-radius:30px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.menu-box span{
+font-size:50px;
+}
+
+/* ZIG ZAG SECTION */
+
+.story{
+padding:80px 8%;
+}
+
+.row{
+display:flex;
+align-items:center;
+gap:50px;
+margin-bottom:80px;
+}
+
+.row:nth-child(even){
+flex-direction:row-reverse;
+}
+
+.row img{
+width:50%;
+border-radius:30px;
+}
+
+.row-text{
+flex:1;
+}
+
+.row-text h2{
+font-size:2.2rem;
+color:var(--brown);
+margin-bottom:15px;
+}
+
+/* PRODUCTS */
+
+.products{
+padding:80px 8%;
+background:white;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:50px;
+}
+
+.section-title h2{
+font-size:2.8rem;
+color:var(--brown);
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.card{
+background:#fff;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+.card img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.card-content{
+padding:20px;
+}
+
+.price{
+color:#E76F51;
+font-weight:700;
+margin:10px 0;
+}
+
+/* TESTIMONI */
+
+.testimoni{
+padding:80px 8%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.testi{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+/* OWNER */
+
+.owner{
+background:linear-gradient(135deg,#FFD6E0,#FFF3D6);
+padding:70px 8%;
+text-align:center;
+}
+
+.owner h2{
+margin-bottom:20px;
+color:var(--brown);
+}
+
+/* FOOTER */
+
+footer{
+background:var(--brown);
+color:white;
+padding:50px;
+text-align:center;
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:3rem;
+}
+
+.navbar{
+flex-direction:column;
+gap:15px;
+}
+
+.row,
+.row:nth-child(even){
+flex-direction:column;
+}
+
+.row img{
+width:100%;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>SweetMelt Bakery 🍩</h1>
+
+<p>
+Manisnya Momen dalam Setiap Gigitan
+</p>
+
+<a href="#" class="btn">Pesan Sekarang</a>
+
+</div>
+
+</section>
+
+<div class="navbar">
+
+<div class="logo">SweetMelt</div>
+
+<ul>
+<li><a href="#">Beranda</a></li>
+<li><a href="#">Menu</a></li>
+<li><a href="#">Promo</a></li>
+<li><a href="#">Tentang</a></li>
+<li><a href="#">Kontak</a></li>
+</ul>
+
+</div>
+
+<section class="menu-strip">
+
+<div class="menu-box">
+<span>🍩</span>
+<h3>Donat</h3>
+</div>
+
+<div class="menu-box">
+<span>🧋</span>
+<h3>Boba</h3>
+</div>
+
+<div class="menu-box">
+<span>🎂</span>
+<h3>Kue Ulang Tahun</h3>
+</div>
+
+<div class="menu-box">
+<span>🧁</span>
+<h3>Cupcake</h3>
+</div>
+
+</section>
+
+<section class="story">
+
+<div class="row">
+
+<img src="https://images.unsplash.com/photo-1551024601-bec78aea704b">
+
+<div class="row-text">
+<h2>Donat Premium</h2>
+<p>
+Donat lembut dengan berbagai topping favorit yang dibuat setiap hari.
+</p>
+</div>
+
+</div>
+
+<div class="row">
+
+<img src="https://images.unsplash.com/photo-1525385133512-2f3bdd039054">
+
+<div class="row-text">
+<h2>Boba Segar</h2>
+<p>
+Minuman boba dengan rasa kekinian yang menyegarkan.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="products">
+
+<div class="section-title">
+<h2>Menu Favorit</h2>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1556911220-bff31c812dba">
+<div class="card-content">
+<h3>Chocolate Donut</h3>
+<div class="price">Rp 12.000</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1579954115545-a95591f28bfc">
+<div class="card-content">
+<h3>Brown Sugar Boba</h3>
+<div class="price">Rp 18.000</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1464306076886-da185f6a9d05">
+<div class="card-content">
+<h3>Strawberry Cake</h3>
+<div class="price">Rp 85.000</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="testimoni">
+
+<div class="testi">
+⭐⭐⭐⭐⭐
+<p>Donatnya lembut dan toppingnya melimpah.</p>
+</div>
+
+<div class="testi">
+⭐⭐⭐⭐⭐
+<p>Bobanya enak dan selalu segar.</p>
+</div>
+
+<div class="testi">
+⭐⭐⭐⭐⭐
+<p>Kuenya cantik dan rasanya premium.</p>
+</div>
+
+</section>
+
+<section class="owner">
+
+<h2>Tentang Kami</h2>
+
+<p>
+SweetMelt Bakery menyediakan aneka kue, donat, dan minuman boba
+berkualitas untuk menemani momen spesial Anda.
+</p>
+
+<br>
+
+<p><strong>Owner:</strong> Miratul</p>
+<p><strong>WhatsApp:</strong> 085267579795</p>
+
+</section>
+
+<footer>
+
+<h3>SweetMelt Bakery 🍩</h3>
+
+<p>Jl. Kuliner Bahagia No. 10</p>
+
+<p>WhatsApp: 085267579795</p>
+
+<p>© 2026 SweetMelt Bakery | Miratul</p>
+
+</footer>
+
+</body>
+</html>
